@@ -1,0 +1,66 @@
+<html>
+<head>
+<style>
+#news{
+	border:1px solid red;
+	width:400px;
+	height:300px;
+}
+</style>
+</head>
+<body>
+
+<div id="news"></div>
+<button id="sport">Load Sport news</button>
+<button id="politics">Load Politics news</button>
+<button id="bussiness">Load Bussiness news</button>
+
+
+<script>
+news = document.getElementById('news');
+function clickSport(){
+	news.innerHTML="";
+	var h1 = document.createElement("h1");
+	h1.innerHTML="Messi scored 5 goals";
+	var p = document.createElement("p");
+	p.innerHTML="Messi scored 5 goals in last match and became top-scorer of the league";
+	news.appendChild(h1);
+	news.appendChild(p);
+	
+	
+	
+}
+
+function clickPol(){
+	news.innerHTML="";
+	var h1 = document.createElement("h1");
+	h1.innerHTML="Trump visited UK";
+	var p = document.createElement("p");
+	p.innerHTML="Trump started his foreign tour by visiting UK";
+	news.appendChild(h1);
+	news.appendChild(p);
+}
+
+function clickBus(){
+	news.innerHTML="";
+	var h1 = document.createElement("h1");
+	h1.innerHTML="Dow Jones index has fallen";
+	var p = document.createElement("p");
+	p.innerHTML="Dow Jones index has fallen, because of prices for petrol";
+	news.appendChild(h1);
+	news.appendChild(p);
+}
+
+document.getElementById("sport").addEventListener("click",clickSport);
+document.getElementById("politics").addEventListener("click",clickPol);
+document.getElementById("bussiness").addEventListener("click",clickBus);
+
+
+
+
+
+	
+	
+</script>
+</body>
+</html>
